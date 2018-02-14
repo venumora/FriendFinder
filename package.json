@@ -10,6 +10,17 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "chosen-js": "^1.8.3",
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ],
+    "delay": "500"
   }
 }
