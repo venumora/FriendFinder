@@ -194,11 +194,13 @@
             $(".chosen-select").chosen();
             let matchName = getParameterByName('matchName');
             let matchImg = getParameterByName('matchImg');
-
-            if(matchName) {
+            if (matchName) {
                 $('#matchName').text(matchName);
-                $('#matchImg').attr({src: matchImg});                
+                $('#matchImg').attr({ src: matchImg });
                 $('#myModal').modal('show');
+                $('#myModal').on('hide.bs.modal', function () {
+                    window.history.back();
+                });
             }
         });
     </script>
